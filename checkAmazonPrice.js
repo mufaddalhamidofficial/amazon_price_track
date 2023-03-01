@@ -15,4 +15,6 @@ price = parseInt(
 );
 
 console.log(price);
-await (await fetch('https://trigger.macrodroid.com/e2228423-89f9-4440-9ceb-7bd4f063325a/amazonalert?price=' + price)).text();
+if (price) {
+  await (await fetch('https://trigger.macrodroid.com/e2228423-89f9-4440-9ceb-7bd4f063325a/amazonalert?price=' + price)).text();
+}
