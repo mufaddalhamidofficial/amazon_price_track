@@ -27,5 +27,5 @@ var price = str.substring(6).replaceAll(',', '');
 
 console.log(price);
 if (price) {
-  await (await fetch('https://trigger.macrodroid.com/e2228423-89f9-4440-9ceb-7bd4f063325a/amazonalert?price=' + price)).text();
+  await (await fetch('https://trigger.macrodroid.com/e2228423-89f9-4440-9ceb-7bd4f063325a/amazonalert?price=' + price + '&date=' + encodeURIComponent(new Date().toISOString()))).text();
 }
